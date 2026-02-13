@@ -15,7 +15,7 @@ export default function FilmsHero() {
       </div>
 
       {/* Title */}
-      <div className="absolute bottom-0 left-0 right-0 bg-[#E8E4DC] py-8 ">
+      <div className="absolute bottom-4 left-0 right-0 bg-[#E8E4DC] py-4 ">
         <h1 
           className="text-center text-4xl md:text-7xl lg:text-8xl xl:text-9xl text-black tracking-wider font-playfair"
         >
