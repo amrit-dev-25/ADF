@@ -1,8 +1,8 @@
 export default function FilmsHero() {
   return (
-    <section className="relative w-full h-screen flex flex-col">
-      {/* Background Image - Takes remaining space */}
-      <div className="relative w-full flex-1 min-h-0">
+    <section className="relative w-full h-screen">
+      {/* Background Image */}
+      <div className="absolute inset-0 w-full h-full">
         <img
           src="/films/hero.jpg"
           alt="Wedding couple"
@@ -12,10 +12,11 @@ export default function FilmsHero() {
         <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
-      {/* Title - Fixed height at bottom */}
-      <div className="bg-[#E8E4DC] py-8">
+      {/* Title */}
+      <div className="absolute bottom-10 md:bottom-0 left-0 right-0 bg-[#E8E4DC] py-4 md:py-8 ">
         <h1 
           className="text-center text-5xl md:text-6xl lg:text-9xl text-black tracking-wider font-playfair"
+          
         >
           FILMS
         </h1>
