@@ -40,7 +40,7 @@ export default function Footer() {
         {/* Social Media Icons */}
         <div className="flex justify-center gap-6 mb-8">
           <a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/abhishekdhuparfilms" 
             target="_blank" 
             rel="noopener noreferrer"
             className=" hover:text-pink-700 transition-colors duration-300"
@@ -49,7 +49,7 @@ export default function Footer() {
             <Instagram size={24} />
           </a>
           <a 
-            href="https://wa.me/1234567890" 
+            href="https://wa.me/919888715322" 
             target="_blank" 
             rel="noopener noreferrer"
             className=" hover:text-green-700 transition-colors duration-300"
@@ -58,7 +58,7 @@ export default function Footer() {
             <FaWhatsapp size={24} />
           </a>
           <a 
-            href="https://youtube.com" 
+            href="https://www.youtube.com/@abhishekdhuparfilms" 
             target="_blank" 
             rel="noopener noreferrer"
             className=" hover:text-red-700 transition-colors duration-300"

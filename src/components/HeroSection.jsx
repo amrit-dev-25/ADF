@@ -26,9 +26,11 @@ export default function HeroSection() {
         </p>
 
         {/* CTA Button */}
-        <button className="border border-white px-10 py-3.5 text-sm tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300">
+        <a href="/#contact">
+        <button className="hidden md:block border border-white px-10 py-3.5 text-sm tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300">
           CONTACT US
         </button>
+        </a>
       </div>
 
       {/* Right Side - Image */}

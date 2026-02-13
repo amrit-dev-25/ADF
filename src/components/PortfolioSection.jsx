@@ -66,10 +66,10 @@ export default function PortfolioSection() {
       {/* Section Title */}
       <div className="text-black px-4 md:px-24 mb-12 md:mb-16">
         <h2 
-          className={`text-6xl md:text-7xl lg:text-8xl transition-all duration-1000 ${
+          className={`text-5xl md:text-7xl lg:text-8xl transition-all duration-1000 font-playfair ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
-          style={{fontFamily: 'Times New Roman, serif'}}
+          
         >
           <span className="italic">The</span> PORTFOLIO
         </h2>
@@ -168,9 +168,11 @@ export default function PortfolioSection() {
             >
               A Quiet Collection Of Moments, Preserved Forever.
             </p>
+            <a href='/photography'>
             <button className="border-2 border-black px-10 py-3 text-xs tracking-widest uppercase hover:bg-black hover:text-[#E8E4DC] transition-all duration-300">
               VIEW PHOTOGRAPHY
             </button>
+            </a>
           </div>
         </div>
 
