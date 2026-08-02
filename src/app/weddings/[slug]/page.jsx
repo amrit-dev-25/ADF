@@ -56,6 +56,8 @@ export default function WeddingGalleryPage() {
             ${count === 1 ? 'w-full' : ''}
             ${count === 2 ? 'grid grid-cols-2 gap-1 ' : ''}
             ${count === 3 ? 'grid grid-cols-3 gap-1 ' : ''}
+            ${count === 4 ? 'grid grid-cols-2 md:grid-cols-4 gap-1 ' : ''}
+            ${count === 5 ? 'grid grid-cols-2 md:grid-cols-5 gap-1 ' : ''}
           `}
           style={{
             animation: `fadeInUp 0.8s ease-out ${rowIndex * 0.1}s both`
