@@ -10,10 +10,64 @@ export default function PhotographyShowcase() {
   // Wedding portfolio data
   const weddings = [
     {
+      id: "henat-supreet",
+      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-8/N1.jpg",
+      names: "Henat & Supreet",
+      slug: "henat-supreet",
+    },
+    {
       id: "anchal-aditya",
       image: "/photography/wedding-3/4A.jpg",
       names: "Anchal & Aditya",
       slug: "anchal-aditya",
+    },
+    {
+      id: "simran-tanmay",
+      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-12/7B.jpg",
+      names: "Simran & Tanmay",
+      slug: "simran-tanmay",
+    },
+    {
+      id: "riya-sukhbi",
+      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-7/11.jpg",
+      names: "Riya & Sukhbi",
+      slug: "riya-sukhbi",
+    },
+    {
+      id: "brides",
+      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-4/7.jpg",
+      names: "Brides",
+      slug: "brides",
+    },
+    {
+      id: "kritika-sahil",
+      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-6/N1.jpg",
+      names: "Kritika & Sahil",
+      slug: "kritika-sahil",
+    },    
+    {
+      id: "akashita-ranvir",
+      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-3/15A.jpg",
+      names: "Akashita & Ranvir",
+      slug: "akashita-ranvir",
+    },
+    {
+      id: "aisha-william",
+      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-10/R1.jpg",
+      names: "Aisha & William",
+      slug: "aisha-william",
+    },
+    {
+      id: "gauri-shwetank",
+      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-5/M2.jpg",
+      names: "Gauri & Shwetank",
+      slug: "gauri-shwetank",
+    },
+    {
+      id: "shwetank-haldi",
+      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-9/13A.jpg",
+      names: "Shwetank Haldi",
+      slug: "shwetank-haldi",
     },
     {
       id: "aditya-haldi",
@@ -22,46 +76,10 @@ export default function PhotographyShowcase() {
       slug: "aditya-haldi",
     },
     {
-      id: "riya-arjun",
-      image: "/photography/wedding-3.jpg",
-      names: "Riya & Arjun",
-      slug: "riya-arjun",
-    },
-    {
-      id: "mehal-kajal-2",
-      image: "/photography/wedding-4.jpg",
-      names: "Mehal & Kajal",
-      slug: "mehal-kajal",
-    },
-    {
-      id: "preeti-sam-2",
-      image: "/photography/wedding-2.webp",
-      names: "Preeti & Sam",
-      slug: "preeti-sam",
-    },
-    {
-      id: "riya-arjun-2",
-      image: "/photography/wedding-3.jpg",
-      names: "Riya & Arjun",
-      slug: "riya-arjun",
-    },
-    {
-      id: "mehal-kajal-3",
-      image: "/photography/wedding-4.jpg",
-      names: "Mehal & Kajal",
-      slug: "mehal-kajal",
-    },
-    {
-      id: "preeti-sam-3",
-      image: "/photography/wedding-5.jpg",
-      names: "Preeti & Sam",
-      slug: "preeti-sam",
-    },
-    {
-      id: "riya-arjun-3",
-      image: "/photography/wedding-2.webp",
-      names: "Riya & Arjun",
-      slug: "riya-arjun",
+      id: "suvigya-keshav-haldi",
+      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-11/11A.jpg",
+      names: "Suvigya & Keshav",
+      slug: "suvigya-keshav-haldi",
     },
   ];
 
@@ -89,7 +107,7 @@ export default function PhotographyShowcase() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen text-black bg-[#E8E4DC] py-16 md:py-20 lg:py-24 px-6 md:px-12 lg:px-20"
+      className="relative w-full min-h-screen text-black bg-[#E8E4DC] py-10 md:py-20 lg:py-24 px-6 md:px-12 lg:px-20"
     >
       <div className="max-w-7xl mx-auto">
         {/* Grid Layout */}
@@ -122,8 +140,8 @@ export default function PhotographyShowcase() {
                 {/* Names */}
                 <div className="p-4 md:p-5 text-center bg-white">
                   <p
-                    className="text-xl md:text-2xl italic transition-colors duration-300 group-hover:text-orange-500"
-                    style={{ fontFamily: "Times New Roman, serif" }}
+                    className="text-xl md:text-2xl italic transition-colors duration-300 font-playfair group-hover:text-orange-500"
+                    //style={{ fontFamily: "Times New Roman, serif" }}
                   >
                     {wedding.names}
                   </p>
