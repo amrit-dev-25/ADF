@@ -17,7 +17,7 @@ export default function PhotographyShowcase() {
     },
     {
       id: "anchal-aditya",
-      image: "/photography/wedding-3/4A.jpg",
+      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-1/6A.jpg",
       names: "Anchal & Aditya",
       slug: "anchal-aditya",
     },
@@ -71,7 +71,7 @@ export default function PhotographyShowcase() {
     },
     {
       id: "aditya-haldi",
-      image: "/photography/wedding-2/8B.jpg",
+      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-2/8B.jpg",
       names: "Aditya Haldi",
       slug: "aditya-haldi",
     },
