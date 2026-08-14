@@ -118,7 +118,7 @@ export default function WeddingGalleryPage() {
             </div>
           </div>
         ) : (
-          <div className="space-y-2 md:space-y-1">
+          <div className="space-y-1 md:space-y-1">
             {renderGallery()}
           </div>
         )}
