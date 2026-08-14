@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function PhotographyShowcase() {
@@ -127,10 +128,12 @@ export default function PhotographyShowcase() {
               <div className="relative overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
                 {/* Image */}
                 <div className="relative w-full aspect-[3/4] overflow-hidden">
-                  <img
+                  <Image
                     src={wedding.image}
                     alt={`Wedding of ${wedding.names}`}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
                   {/* Overlay on hover */}
@@ -141,7 +144,6 @@ export default function PhotographyShowcase() {
                 <div className="p-4 md:p-5 text-center bg-white">
                   <p
                     className="text-xl md:text-2xl italic transition-colors duration-300 font-playfair group-hover:text-orange-500"
-                    //style={{ fontFamily: "Times New Roman, serif" }}
                   >
                     {wedding.names}
                   </p>
