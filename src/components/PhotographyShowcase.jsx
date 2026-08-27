@@ -45,7 +45,7 @@ export default function PhotographyShowcase() {
       image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-6/N1.jpg",
       names: "Kritika & Sahil",
       slug: "kritika-sahil",
-    },    
+    },
     {
       id: "akashita-ranvir",
       image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-3/15A.jpg",
@@ -108,11 +108,11 @@ export default function PhotographyShowcase() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen text-black bg-[#E8E4DC] py-10 md:py-20 lg:py-24 px-6 md:px-12 lg:px-20"
+      className="relative w-full min-h-screen text-black bg-white py-10 md:py-20 lg:py-24 px-6 md:px-12 lg:px-20"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* Grid Layout - no gap between images, whitespace comes from section padding */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
           {weddings.map((wedding, index) => (
             <Link
               key={wedding.id}
@@ -124,27 +124,22 @@ export default function PhotographyShowcase() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              {/* Card Container */}
-              <div className="relative overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
-                {/* Image */}
-                <div className="relative w-full aspect-[3/4] overflow-hidden">
-                  <Image
-                    src={wedding.image}
-                    alt={`Wedding of ${wedding.names}`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
+              {/* Image - 2:3 aspect ratio, edge to edge, no rounding/shadow */}
+              <div className="relative w-full aspect-[2/3] overflow-hidden">
+                <Image
+                  src={wedding.image}
+                  alt={`Wedding of ${wedding.names}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
 
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
-                </div>
+                {/* Dark overlay on hover */}
+                <div className="absolute inset-0 bg-white/0 group-hover:bg-white/75 transition-all duration-500" />
 
-                {/* Names */}
-                <div className="p-4 md:p-5 text-center bg-white">
-                  <p
-                    className="text-xl md:text-2xl italic transition-colors duration-300 font-playfair group-hover:text-orange-500"
-                  >
+                {/* Names overlay - shown on hover, centered over image */}
+                <div className="absolute inset-0 flex items-center justify-center px-4">
+                  <p className="font-playfair italic text-black text-sm md:text-base tracking-wider uppercase text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0">
                     {wedding.names}
                   </p>
                 </div>

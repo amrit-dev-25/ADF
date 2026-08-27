@@ -13,18 +13,18 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       image: '/testimonials/testimonial-1.jpg',
-      quote: "Choosing Abhishek Dhupar Films was the most effortless decision of our wedding. They didn't just document our days — they preserved our emotions. Every time we revisit our photographs and film, we don't see frames, we feel moments. The laughter, the tears, the stolen glances... all still live there, exactly as they were. It's not just a memory — it's our story, beautifully told.",
-      name: 'Aarav & Parvi'
+      quote: "The video is so beautiful. So beautiful. I have already rewatched it almost instantly. All the people who saw the longer version of the wedding highlights said it was so emotional and took them back to November. Your work speaks the emotion you have for your craft and that’s why it really hits the spot doesn’t matter who you are capturing. A big heartfelt thanks from all of us for preserving our beautiful memories for the rest of our lives. We will forever replay the video to relive the days, the moments. I have said this before and I will say it again - choosing you & your team was the best decision of the entire wedding.",
+      name: 'ANSHULA'
     },
     {
       image: '/testimonials/testimonial-2.jpg',
-      quote: "From the first meeting to the final delivery, working with Abhishek was seamless. The team captured every emotion with such grace and artistry. Our wedding film feels like a timeless piece of cinema that we'll treasure forever.",
-      name: 'Rohan & Meera'
+      quote: "Amazing wedding photography team! They were very professional, friendly, and made us feel completely comfortable. The candid photos came out beautifully, and we really appreciated how they captured every special moment without disturbing any rituals or the natural flow of the function. Highly recommended! ",
+      name: 'KRITIKA'
     },
     {
       image: '/testimonials/testimonial-3.jpg',
-      quote: "The attention to detail and the way they captured the essence of our celebration was beyond our expectations. Every frame tells our story in the most beautiful way. We couldn't have asked for better storytellers.",
-      name: 'Kabir & Ananya'
+      quote: "Honestly, we couldn’t have asked for a better team! The photos turned out so gooood, especially the candid ones. They captured so many little moments we didn’t even notice ourselves. Everything from the shooting to the editing was done so beautifully and naturally. You guys genuinely know what you’re doing. It really felt like having friends around who just happened to be magicians with a camera. THANKYOU SO MUCH… Abhishek and team!",
+      name: 'NOOR'
     },
     {
       image: '/testimonials/testimonial-4.jpg',
@@ -75,7 +75,7 @@ export default function TestimonialsSection() {
             }`}
             style={{fontFamily: 'Times New Roman, serif'}}
           >
-            Voices Of <span className="italic">Forever</span>
+             Words They <span className="italic">Left</span> Behind 
           </h2>
 
           {/* Image */}
@@ -184,13 +184,13 @@ export default function TestimonialsSection() {
               className="text-6xl lg:text-7xl leading-tight text-center"
               style={{fontFamily: 'Times New Roman, serif'}}
             >
-              Voices Of <span className="italic">Forever</span>
+              Words They Left Behind
             </h2>
 
             {/* Quote with fade transition */}
             <div key={`quote-${currentIndex}`} className="animate-fadeIn">
               <p 
-                className="text-lg lg:text-lg leading-relaxed italic font-playfair text-center"
+                className="text-lg lg:text-lg leading-relaxed font-playfair text-center"
               >
                 "{testimonials[currentIndex].quote}"
               </p>

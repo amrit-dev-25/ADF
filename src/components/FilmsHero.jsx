@@ -1,25 +1,47 @@
+const R2_BASE_URL = 'https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev'; 
+
 export default function FilmsHero() {
   return (
-    <section className="relative w-full h-screen">
-      {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full">
-        <img
-          src="/films/hero.jpg"
-          alt="Wedding couple"
-          className="w-full h-full object-cover"
-        />
-        {/* Optional overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black/10"></div>
+    <section className="w-full bg-white">
+      {/* Media + FILMS overlay */}
+      <div className="relative w-full h-[60vh] md:h-[75vh] lg:h-[85vh]">
+        
+          
+
+          <video
+            src={`${R2_BASE_URL}/Films/FilmsHero.mp4`}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          />
+       
+       
+
+        {/* Subtle overlay for text legibility */}
+        <div className="absolute inset-0 bg-black/10" />
+
+        {/* FILMS title on the image */}
+        <div className="absolute inset-x-0 bottom-6 md:bottom-10 lg:bottom-14 px-4">
+          <h1 className="text-center text-4xl md:text-7xl lg:text-8xl xl:text-8xl text-white tracking-wider font-playfair drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
+            FILMS
+          </h1>
+        </div>
       </div>
 
-      {/* Title */}
-      <div className="absolute bottom-10 md:bottom-0 left-0 right-0 bg-[#E8E4DC] py-4 md:py-8 ">
-        <h1 
-          className="text-center text-5xl md:text-6xl lg:text-9xl text-black tracking-wider font-playfair"
-          
-        >
-          FILMS
-        </h1>
+      {/* Text content below the media */}
+      <div className="w-full bg-white px-6 md:px-16 lg:px-32 py-10 md:py-14">
+        <h2 className="text-center font-playfair text-2xl md:text-3xl lg:text-4xl text-black tracking-wide mb-3">
+          Films made to feel, not just remember.
+        </h2>
+
+        <p className="max-w-4xl mx-auto text-justify font-playfair text-sm md:text-base leading-relaxed text-black/80">
+          We don&rsquo;t make films for Instagram, for trends, or for anyone else. We
+          make them for you and for the people you love. For the years when you&rsquo;ll
+          sit together, watch them again, and remember how that day truly felt. All we
+          want is to give you a way to come back to your wedding, whenever you miss it.
+        </p>
       </div>
     </section>
   );

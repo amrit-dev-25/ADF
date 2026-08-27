@@ -44,7 +44,7 @@ export default function DocumentariesSection() {
             style={{fontFamily: 'Times New Roman, serif'}}
           >
             The Wedding<br />
-            <span className="italic">Chronicle</span>
+            <span className="italic">Chronicles</span>
           </h2>
 
           {/* Image */}
@@ -67,8 +67,7 @@ export default function DocumentariesSection() {
             }`}
             style={{fontFamily: 'Times New Roman, serif'}}
           >
-            A curated film journey that follows your celebration from the first promise to the final farewell. Every ritual, every glance, and every unspoken emotion is woven into a seamless story designed to be felt, not just watched.
-          </p>
+Wedding documentaries are long-form films, where every moment finds its place. From the grand celebrations to the little in-between moments, everything is carefully woven into a cinematic story. Though the film may be long, every cut keeps it moving, so you never feel the length—just the day, unfolding beautifully, moment by moment. Big thanks to our talented cinematographers and editors.           </p>
 
           {/* Button */}
           <div 
@@ -99,7 +98,7 @@ export default function DocumentariesSection() {
               style={{fontFamily: 'Times New Roman, serif'}}
             >
               The Wedding<br />
-              <span className="italic">Chronicle</span>
+              <span className="italic">Chronicles</span>
             </h2>
 
             {/* Description */}
@@ -107,8 +106,7 @@ export default function DocumentariesSection() {
               className="text-lg lg:text-xl leading-relaxed max-w-lg"
               style={{fontFamily: 'Times New Roman, serif'}}
             >
-              A curated film journey that follows your celebration from the first promise to the final farewell. Every ritual, every glance, and every unspoken emotion is woven into a seamless story designed to be felt, not just watched.
-            </p>
+Wedding documentaries are long-form films, where every moment finds its place. From the grand celebrations to the little in-between moments, everything is carefully woven into a cinematic story. Though the film may be long, every cut keeps it moving, so you never feel the length—just the day, unfolding beautifully, moment by moment. Big thanks to our talented cinematographers and editors.             </p>
 
             {/* Button */}
             <Link href="/documentaries">

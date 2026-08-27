@@ -31,34 +31,34 @@ export default function PortfolioSection() {
 
   // Photography images - 10 total (5 top, 5 bottom)
   const topRowImages = [
-    '/portfolio/image1.jpg',
-    '/portfolio/image2.jpg',
-    '/portfolio/image3.jpg',
-    '/portfolio/image4.jpg',
-    '/portfolio/image5.jpg',
+    '/portfolio/1.jpg',
+    '/portfolio/7.jpg',
+    '/portfolio/10.jpg',
+    '/portfolio/4.jpg',
+    '/portfolio/6.jpg',
   ];
 
   const bottomRowImages = [
-    '/portfolio/image6.jpg',
-    '/portfolio/image7.jpg',
-    '/portfolio/image8.jpg',
-    '/portfolio/image9.jpg',
-    '/portfolio/image10.jpg',
+    '/portfolio/5.jpg',
+    '/portfolio/2.jpg',
+    '/portfolio/14.jpg',
+    '/portfolio/9.jpg',
+    '/portfolio/3.jpg',
   ];
 
   // For mobile - only use 8 images (omit photo-5 and photo-10 for symmetry)
   const mobileTopImages = [
-    '/portfolio/image1.jpg',
-    '/portfolio/image2.jpg',
-    '/portfolio/image3.jpg',
-    '/portfolio/image4.jpg',
+    '/portfolio/1.jpg',
+    '/portfolio/2.jpg',
+    '/portfolio/3.jpg',
+    '/portfolio/4.jpg',
   ];
 
   const mobileBottomImages = [
-    '/portfolio/image6.jpg',
-    '/portfolio/image7.jpg',
-    '/portfolio/image8.jpg',
-    '/portfolio/image9.jpg',
+    '/portfolio/6.jpg',
+    '/portfolio/7.jpg',
+    '/portfolio/8.jpg',
+    '/portfolio/9.jpg',
   ];
 
   return (
@@ -106,11 +106,11 @@ export default function PortfolioSection() {
               className="text-2xl md:text-3xl lg:text-4xl italic mb-8"
               style={{fontFamily: 'Times New Roman, serif'}}
             >
-              A Quiet Collection Of Moments, Preserved Forever.
+              The love, laughter, and little moments in between
             </p>
             <a href='/photography'>
             <button className="border-2 border-black px-12 py-3.5 text-sm tracking-widest uppercase hover:bg-black hover:text-[#E8E4DC] transition-all duration-300">
-              VIEW PHOTOGRAPHY
+              Enter the Gallery
             </button>
             </a>
           </div>

@@ -8,21 +8,21 @@ export default function HeroSection() {
         {/* Logo - You'll replace this */}
         <div className="mb-8">
           <img 
-            src="/logo.png" 
+            src="/ADF.png" 
             alt="Abhishek Dhupar Films" 
-            className="w-80 h-auto"
+            className="w-50 h-auto"
           />
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-5xl xl:text-6xl mb-8 leading-tight text-center" style={{fontFamily: 'Times New Roman, serif'}}>
-          Every Heartbeat<br />
-          <span className="italic">Framed</span> In Time
+        <h1 className="text-4xl md:text-5xl xl:text-6xl mb-8 text-center" style={{fontFamily: 'Times New Roman, serif'}}>
+          Real Moments,<br />
+          <span className="italic">Timeless</span> Stories
         </h1>
 
         {/* Subheading */}
-        <p className="text-lg md:text-xl italic mb-12 font-light text-center" style={{fontFamily: 'Times New Roman, serif'}}>
-          Specialising in Wedding Images and Documentries
+        <p className="text-lg md:text-lg  mb-12 font-light text-center font-playfair italic" >
+          We capture weddings as they truly feel — the laughter, the tears, the quiet glances, and everything in between. Through photographs and films, we preserve the magic of the moments you shared, creating memories that take you back to your wedding day, exactly as you remember it
         </p>
 
         {/* CTA Button */}
@@ -36,7 +36,7 @@ export default function HeroSection() {
       {/* Right Side - Image */}
       <div className="hidden lg:block lg:w-1/2 relative">
         <img 
-          src="/hero-image.jpg" 
+          src="/AA-PW-83.jpg" 
           alt="Wedding couple" 
           className="w-full h-full object-cover"
         />
@@ -45,7 +45,7 @@ export default function HeroSection() {
       {/* Mobile Image - Show below on smaller screens */}
       <div className="lg:hidden absolute inset-0  opacity-30">
         <img 
-          src="/hero-image.jpg" 
+          src="/AA-PW-83.jpg" 
           alt="Wedding couple" 
           className="w-full h-full object-cover"
         />
