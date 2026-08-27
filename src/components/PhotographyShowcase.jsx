@@ -9,76 +9,115 @@ export default function PhotographyShowcase() {
   const sectionRef = useRef(null);
 
   // Wedding portfolio data
+  // mobileImage: a separate image used on small screens — these already have
+  // the couple's name/title designed into the photo, so no text overlay is
+  // rendered on top of them in code. Falls back to `image` if not provided.
   const weddings = [
     {
       id: "henat-supreet",
-      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-8/N1.jpg",
+      image:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-8/N1.jpg",
+      mobileImage:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-8/N1.jpg",
       names: "Henat & Supreet",
       slug: "henat-supreet",
     },
     {
       id: "anchal-aditya",
-      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-1/6A.jpg",
+      image:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-1/6A.jpg",
+      mobileImage:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-1/6A.jpg",
       names: "Anchal & Aditya",
       slug: "anchal-aditya",
     },
     {
       id: "simran-tanmay",
-      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-12/7B.jpg",
+      image:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-12/7B.jpg",
+      mobileImage:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-12/7B.jpg",
       names: "Simran & Tanmay",
       slug: "simran-tanmay",
     },
     {
       id: "riya-sukhbi",
-      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-7/11.jpg",
+      image:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-7/11.jpg",
+      mobileImage:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-7/11.jpg",
       names: "Riya & Sukhbi",
       slug: "riya-sukhbi",
     },
     {
       id: "brides",
-      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-4/7.jpg",
+      image:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-4/7.jpg",
+      mobileImage:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-4/7.jpg",
       names: "Brides",
       slug: "brides",
     },
     {
       id: "kritika-sahil",
-      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-6/N1.jpg",
+      image:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-6/N1.jpg",
+      mobileImage:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-6/N1.jpg",
       names: "Kritika & Sahil",
       slug: "kritika-sahil",
     },
     {
       id: "akashita-ranvir",
-      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-3/15A.jpg",
+      image:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-3/15A.jpg",
+      mobileImage:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-3/15A.jpg",
       names: "Akashita & Ranvir",
       slug: "akashita-ranvir",
     },
     {
       id: "aisha-william",
-      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-10/R1.jpg",
+      image:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-10/R1.jpg",
+      mobileImage:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-10/R1.jpg",
       names: "Aisha & William",
       slug: "aisha-william",
     },
     {
       id: "gauri-shwetank",
-      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-5/M2.jpg",
+      image:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-5/M2.jpg",
+      mobileImage:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-5/M2.jpg",
       names: "Gauri & Shwetank",
       slug: "gauri-shwetank",
     },
     {
       id: "shwetank-haldi",
-      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-9/13A.jpg",
+      image:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-9/13A.jpg",
+      mobileImage:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-9/13A.jpg",
       names: "Shwetank Haldi",
       slug: "shwetank-haldi",
     },
     {
       id: "aditya-haldi",
-      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-2/8B.jpg",
+      image:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-2/8B.jpg",
+      mobileImage:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-2/8B.jpg",
       names: "Aditya Haldi",
       slug: "aditya-haldi",
     },
     {
       id: "suvigya-keshav-haldi",
-      image: "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-11/11A.jpg",
+      image:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-11/11A.jpg",
+      mobileImage:
+        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-11/11A.jpg",
       names: "Suvigya & Keshav",
       slug: "suvigya-keshav-haldi",
     },
@@ -111,8 +150,8 @@ export default function PhotographyShowcase() {
       className="relative w-full min-h-screen text-black bg-white py-10 md:py-20 lg:py-24 px-6 md:px-12 lg:px-20"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Grid Layout - no gap between images, whitespace comes from section padding */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+        {/* Grid Layout - gap on mobile only, edge-to-edge from md up */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-0">
           {weddings.map((wedding, index) => (
             <Link
               key={wedding.id}
@@ -124,24 +163,40 @@ export default function PhotographyShowcase() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              {/* Image - 2:3 aspect ratio, edge to edge, no rounding/shadow */}
-              <div className="relative w-full aspect-[2/3] overflow-hidden">
+              {/* Desktop image - 2:3 aspect ratio, no rounding/shadow */}
+              <div className="hidden md:block relative w-full aspect-[2/3] overflow-hidden">
                 <Image
                   src={wedding.image}
                   alt={`Wedding of ${wedding.names}`}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
-                {/* Dark overlay on hover */}
+                {/* White overlay + centered name on hover */}
                 <div className="absolute inset-0 bg-white/0 group-hover:bg-white/75 transition-all duration-500" />
-
-                {/* Names overlay - shown on hover, centered over image */}
                 <div className="absolute inset-0 flex items-center justify-center px-4">
                   <p className="font-playfair italic text-black text-sm md:text-base tracking-wider uppercase text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0">
                     {wedding.names}
                   </p>
+                </div>
+              </div>
+
+              {/* Mobile - dedicated image (title baked in), no text overlay */}
+              <div className="md:hidden relative w-full aspect-[3/4] overflow-hidden">
+                <Image
+                  src={wedding.mobileImage || wedding.image}
+                  alt={`Wedding of ${wedding.names}`}
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                />
+
+                {/* View Gallery bar - overlaid on the image itself, bottom edge */}
+                <div className="absolute inset-x-0 bottom-0 bg-white/75 px-4 py-1 flex justify-end">
+                  <span className="text-[10px]  tracking-wide text-black">
+                    VIEW GALLERY &gt;
+                  </span>
                 </div>
               </div>
             </Link>
