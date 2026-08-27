@@ -5,7 +5,7 @@ import Image from "next/image";
 
 // Bunny Stream — hosted video with a built-in player (controls, fullscreen,
 // adaptive quality) delivered via a simple iframe embed. No extra JS library needed.
-const BUNNY_LIBRARY_ID = process.env.BUNNY_LIBRARY_ID;
+const BUNNY_LIBRARY_ID = process.env.NEXT_PUBLIC_BUNNY_LIBRARY_ID;
 
 export default function FilmsShowcase() {
   const films = [

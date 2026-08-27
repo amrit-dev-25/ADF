@@ -1,23 +1,22 @@
-const R2_BASE_URL = 'https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev'; 
+// components/FilmsHero.jsx
+
+const BUNNY_PULL_ZONE = process.env.NEXT_PUBLIC_BUNNY_PULL_ZONE;
+const FILMS_HERO_VIDEO_ID = process.env.NEXT_PUBLIC_FILMS_HERO_VIDEO_ID;
 
 export default function FilmsHero() {
   return (
     <section className="w-full bg-white">
       {/* Media + FILMS overlay */}
       <div className="relative w-full h-[60vh] md:h-[75vh] lg:h-[85vh]">
-        
-          
 
-          <video
-            src={`${R2_BASE_URL}/Films/FilmsHero.mp4`}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          />
-       
-       
+        <video
+          src={`https://${BUNNY_PULL_ZONE}.b-cdn.net/${FILMS_HERO_VIDEO_ID}/play_1080p.mp4`}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        />
 
         {/* Subtle overlay for text legibility */}
         <div className="absolute inset-0 bg-black/10" />
