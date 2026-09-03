@@ -1,15 +1,8 @@
 // components/Documentaries.jsx
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
-
-// Cloudinary's official player — gives you full controls, fullscreen,
-// scrub-thumbnails, quality/speed menu, etc. out of the box.
-// Install: npm install cloudinary-video-player
-import "cloudinary-video-player/cld-video-player.min.css";
-
-const CLOUDINARY_CLOUD_NAME = "your-cloud-name"; // TODO: replace with your Cloudinary cloud name
 
 export default function Documentaries() {
   const [playingId, setPlayingId] = useState(null);
@@ -17,37 +10,37 @@ export default function Documentaries() {
   const films = [
     {
       id: 1,
-      image: "/documentaries/documentary-1.jpg",
-      videoPublicId: "documentaries/documentary-1", // TODO: set once uploaded to Cloudinary
-      names: "Riya\n&\nArjun",
-      namess: "Riya & Arjun",
+      image: "/documentaries/1.png",
+      youtubeId: "VbDk_gd2rF8", // TODO: YouTube video ID once uploaded, e.g. "dQw4w9WgXcQ"
+      names: "Kritika\n&\nSahil",
+      namess: "Kritika & Sahil",
       location: "PHUKET, THAILAND",
       imagePosition: "left",
     },
     {
       id: 2,
-      image: "/documentaries/documentary-2.jpg",
-      videoPublicId: "documentaries/documentary-2",
-      names: "Ruchika\n&\nBhavesh",
-      namess: "Ruchika & Bhavesh",
+      image: "/documentaries/2.png",
+      youtubeId: "F_htYbw1-Tw",
+      names: "Anchal\n&\nAditya",
+      namess: "Anchal & Aditya",
       location: "CHANDIGARH",
       imagePosition: "right",
     },
     {
       id: 3,
-      image: "/documentaries/documentary-3.jpg",
-      videoPublicId: "documentaries/documentary-3",
-      names: "Alisha\n&\nHarsh",
-      namess: "Alisha & Harsh",
+      image: "/documentaries/3.png",
+      youtubeId: "CvuRvBwxazw",
+      names: "Gauri\n&\nShwetank",
+      namess: "Gauri & Shwetank",
       location: "JALANDHAR, PUNJAB",
       imagePosition: "left",
     },
     {
       id: 4,
-      image: "/documentaries/documentary-4.jpg",
-      videoPublicId: "documentaries/documentary-4",
-      names: "Siya\n&\nSatbeer",
-      namess: "Siya & Satbeer",
+      image: "/documentaries/4.png",
+      youtubeId: "f3QEllRuQfs",
+      names: "Simran\n&\nTanmay",
+      namess: "Simran & Tanmay",
       location: "AMRITSAR, PUNJAB",
       imagePosition: "right",
     },
@@ -97,16 +90,12 @@ export default function Documentaries() {
               )}
 
               {/*
-                LATER (Cloudinary video, once footage is uploaded) — this already
-                works once `videoPublicId` is filled in and the cloud name is set.
-                Clicking the thumbnail above swaps it for this player and starts playback.
+                LATER (YouTube video) — this already works once `youtubeId`
+                is filled in. Clicking the thumbnail above swaps it for this
+                player and starts playback.
               */}
               {playingId === film.id && (
-                <CloudinaryFilmPlayer
-                  publicId={film.videoPublicId}
-                  title={film.namess}
-                  autoPlay
-                />
+                <YouTubePlayer videoId={film.youtubeId} title={film.namess} />
               )}
             </div>
 
@@ -129,50 +118,19 @@ export default function Documentaries() {
   );
 }
 
-// Full-featured Cloudinary video player: controls, fullscreen, scrub
-// thumbnails, quality/speed menu. Rendered in place of the thumbnail once
-// a film's play button has been clicked.
-function CloudinaryFilmPlayer({ publicId, title, autoPlay = false }) {
-  const videoRef = useRef(null);
-  const playerRef = useRef(null);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    (async () => {
-      const cloudinaryCore = await import("cloudinary-video-player");
-      const cld = cloudinaryCore.default || cloudinaryCore;
-
-      if (!isMounted || !videoRef.current) return;
-
-      playerRef.current = cld.videoPlayer(videoRef.current, {
-        cloudName: CLOUDINARY_CLOUD_NAME,
-        controls: true,
-        fluid: true,
-        muted: false,
-        loop: false,
-        autoplay: autoPlay,
-        showJumpControls: false,
-        seekThumbnails: true,
-        colors: { accent: "#000000" }, // tweak to match your brand color
-      });
-
-      playerRef.current.source(publicId, { sourceTypes: ["hls", "mp4"] });
-    })();
-
-    return () => {
-      isMounted = false;
-      playerRef.current?.dispose();
-    };
-  }, [publicId, autoPlay]);
-
+// YouTube's hosted player via iframe embed. modestbranding shrinks the
+// YouTube logo, rel=0 limits related videos to your own channel, and
+// autoplay=1 works here because this only mounts as the direct result of
+// the user's click on the thumbnail above (a genuine user gesture).
+function YouTubePlayer({ videoId, title }) {
   return (
-    <video
-      ref={videoRef}
-      className="cld-video-player cld-fluid w-full h-full object-cover"
-      controls
-      playsInline
-      aria-label={title}
+    <iframe
+      src={`https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`}
+      loading="lazy"
+      className="absolute inset-0 w-full h-full border-0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+      title={title}
     />
   );
 }

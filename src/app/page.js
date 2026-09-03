@@ -5,6 +5,7 @@ import FilmsSection from '@/components/FilmsSection';
 import DocumentariesSection from '@/components/DocumentariesSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactForm  from '@/components/Contactform';
+import FAQ from '@/components/Faq';
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <FilmsSection />
       <DocumentariesSection />
       <TestimonialsSection />
+      <FAQ />
       <ContactForm />
     </main>
   );

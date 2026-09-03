@@ -3,98 +3,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 
 const inputStyle = { fontFamily: "Times New Roman, serif" };
 
-export default function ContactForm() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    eventDate: "",
-    message: "",
-    hearAboutUs: "",
-  });
-  const [status, setStatus] = useState(""); // 'sending', 'success', 'error'
-  const sectionRef = useRef(null);
-  const formRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 },
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setStatus("sending");
-
-    // Get EmailJS credentials from environment variables
-    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-
-    // Check if credentials are configured
-    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-      console.error("EmailJS credentials are not configured properly");
-      setStatus("error");
-      setTimeout(() => {
-        setStatus("");
-      }, 3000);
-      return;
-    }
-
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
-      .then((result) => {
-        console.log("Success:", result.text);
-        setStatus("success");
-        // Reset form after 3 seconds
-        setTimeout(() => {
-          setFormData({
-            name: "",
-            phone: "",
-            eventDate: "",
-            message: "",
-            hearAboutUs: "",
-          });
-          setStatus("");
-        }, 3000);
-      })
-      .catch((error) => {
-        console.error("Error:", error.text);
-        setStatus("error");
-        setTimeout(() => {
-          setStatus("");
-        }, 3000);
-      });
-  };
-
-  const FormFields = () => (
+// Defined outside ContactForm so it isn't recreated on every render —
+// keeping it inside was causing inputs to lose focus after every keystroke.
+function FormFields({ formData, handleChange, status }) {
+  return (
     <>
       {/* Name */}
       <div className="space-y-2">
@@ -215,6 +130,85 @@ export default function ContactForm() {
       )}
     </>
   );
+}
+
+export default function ContactForm() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    eventDate: "",
+    message: "",
+    hearAboutUs: "",
+  });
+  const [status, setStatus] = useState(""); // 'sending', 'success', 'error'
+  const sectionRef = useRef(null);
+  const formRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 },
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
+      .then(async (res) => {
+        if (!res.ok) throw new Error("Failed to send");
+        return res.json();
+      })
+      .then(() => {
+        setStatus("success");
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setFormData({
+            name: "",
+            phone: "",
+            eventDate: "",
+            message: "",
+            hearAboutUs: "",
+          });
+          setStatus("");
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setStatus("error");
+        setTimeout(() => {
+          setStatus("");
+        }, 3000);
+      });
+  };
 
   return (
     <section
@@ -295,7 +289,11 @@ export default function ContactForm() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <FormFields />
+            <FormFields
+              formData={formData}
+              handleChange={handleChange}
+              status={status}
+            />
           </form>
         </div>
 
@@ -375,7 +373,11 @@ export default function ContactForm() {
                 : "opacity-0 translate-x-10"
             }`}
           >
-            <FormFields />
+            <FormFields
+              formData={formData}
+              handleChange={handleChange}
+              status={status}
+            />
           </form>
         </div>
       </div>
