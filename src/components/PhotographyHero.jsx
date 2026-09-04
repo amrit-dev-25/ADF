@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const R2_BASE_URL = 'https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev';
+const R2_BASE_URL = 'https://media.abhishekdhuparfilms.com';
 
 const heroImages = [
   `${R2_BASE_URL}/wedding-7/9.jpg`,

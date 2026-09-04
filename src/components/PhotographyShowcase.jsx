@@ -16,108 +16,108 @@ export default function PhotographyShowcase() {
     {
       id: "henat-supreet",
       image:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-8/N1.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-8/N1.jpg",
       mobileImage:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-8/N1.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-8/N1.jpg",
       names: "Henat & Supreet",
       slug: "henat-supreet",
     },
     {
       id: "anchal-aditya",
       image:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-1/6A.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-1/6A.jpg",
       mobileImage:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-1/6A.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-1/6A.jpg",
       names: "Anchal & Aditya",
       slug: "anchal-aditya",
     },
     {
       id: "simran-tanmay",
       image:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-12/7B.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-12/7B.jpg",
       mobileImage:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-12/7B.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-12/7B.jpg",
       names: "Simran & Tanmay",
       slug: "simran-tanmay",
     },
     {
       id: "riya-sukhbi",
       image:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-7/11.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-7/11.jpg",
       mobileImage:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-7/11.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-7/11.jpg",
       names: "Riya & Sukhbi",
       slug: "riya-sukhbi",
     },
     {
       id: "brides",
       image:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-4/7.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-4/7.jpg",
       mobileImage:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-4/7.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-4/7.jpg",
       names: "Brides",
       slug: "brides",
     },
     {
       id: "kritika-sahil",
       image:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-6/N1.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-6/N1.jpg",
       mobileImage:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-6/N1.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-6/N1.jpg",
       names: "Kritika & Sahil",
       slug: "kritika-sahil",
     },
     {
       id: "akashita-ranvir",
       image:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-3/15A.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-3/15A.jpg",
       mobileImage:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-3/15A.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-3/15A.jpg",
       names: "Akashita & Ranvir",
       slug: "akashita-ranvir",
     },
     {
       id: "aisha-william",
       image:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-10/R1.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-10/R1.jpg",
       mobileImage:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-10/R1.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-10/R1.jpg",
       names: "Aisha & William",
       slug: "aisha-william",
     },
     {
       id: "gauri-shwetank",
       image:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-5/M2.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-5/M2.jpg",
       mobileImage:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-5/M2.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-5/M2.jpg",
       names: "Gauri & Shwetank",
       slug: "gauri-shwetank",
     },
     {
       id: "shwetank-haldi",
       image:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-9/13A.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-9/13A.jpg",
       mobileImage:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-9/13A.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-9/13A.jpg",
       names: "Shwetank Haldi",
       slug: "shwetank-haldi",
     },
     {
       id: "aditya-haldi",
       image:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-2/8B.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-2/8B.jpg",
       mobileImage:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-2/8B.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-2/8B.jpg",
       names: "Aditya Haldi",
       slug: "aditya-haldi",
     },
     {
       id: "suvigya-keshav-haldi",
       image:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-11/11A.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-11/11A.jpg",
       mobileImage:
-        "https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev/wedding-11/11A.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-11/11A.jpg",
       names: "Suvigya & Keshav",
       slug: "suvigya-keshav-haldi",
     },

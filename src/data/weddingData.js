@@ -1,5 +1,5 @@
 // src/data/weddingData.js (WITH PLACEHOLDER IMAGES FOR TESTING)
-const R2_BASE_URL = 'https://pub-1677d55d7df14ebc89ad2b893563a0d8.r2.dev'; // Replace with your actual R2 base URL
+const R2_BASE_URL = 'https://media.abhishekdhuparfilms.com'; // Replace with your actual R2 base URL
 
 export const weddingGalleries = {
   "anchal-aditya": {
