@@ -6,7 +6,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'https://media.abhishekdhuparfilms.com',
+        hostname: 'media.abhishekdhuparfilms.com',
       },
     ],
   },
