@@ -18,7 +18,7 @@ export default function PhotographyShowcase() {
       image:
         "https://media.abhishekdhuparfilms.com/wedding-8/N1.jpg",
       mobileImage:
-        "https://media.abhishekdhuparfilms.com/wedding-8/N1.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-8/N2.jpg",
       names: "Henat & Supreet",
       slug: "henat-supreet",
     },
@@ -27,7 +27,7 @@ export default function PhotographyShowcase() {
       image:
         "https://media.abhishekdhuparfilms.com/wedding-1/6A.jpg",
       mobileImage:
-        "https://media.abhishekdhuparfilms.com/wedding-1/6A.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-1/M-1.jpg",
       names: "Anchal & Aditya",
       slug: "anchal-aditya",
     },
@@ -36,7 +36,7 @@ export default function PhotographyShowcase() {
       image:
         "https://media.abhishekdhuparfilms.com/wedding-12/7B.jpg",
       mobileImage:
-        "https://media.abhishekdhuparfilms.com/wedding-12/7B.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-12/M-12.jpg",
       names: "Simran & Tanmay",
       slug: "simran-tanmay",
     },
@@ -45,7 +45,7 @@ export default function PhotographyShowcase() {
       image:
         "https://media.abhishekdhuparfilms.com/wedding-7/11.jpg",
       mobileImage:
-        "https://media.abhishekdhuparfilms.com/wedding-7/11.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-7/M-7.jpg",
       names: "Riya & Sukhbi",
       slug: "riya-sukhbi",
     },
@@ -54,7 +54,7 @@ export default function PhotographyShowcase() {
       image:
         "https://media.abhishekdhuparfilms.com/wedding-4/7.jpg",
       mobileImage:
-        "https://media.abhishekdhuparfilms.com/wedding-4/7.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-4/M-4.jpg",
       names: "Brides",
       slug: "brides",
     },
@@ -63,7 +63,7 @@ export default function PhotographyShowcase() {
       image:
         "https://media.abhishekdhuparfilms.com/wedding-6/N1.jpg",
       mobileImage:
-        "https://media.abhishekdhuparfilms.com/wedding-6/N1.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-6/M-6.jpg",
       names: "Kritika & Sahil",
       slug: "kritika-sahil",
     },
@@ -72,7 +72,7 @@ export default function PhotographyShowcase() {
       image:
         "https://media.abhishekdhuparfilms.com/wedding-3/15A.jpg",
       mobileImage:
-        "https://media.abhishekdhuparfilms.com/wedding-3/15A.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-3/M-3.jpg",
       names: "Akashita & Ranvir",
       slug: "akashita-ranvir",
     },
@@ -81,7 +81,7 @@ export default function PhotographyShowcase() {
       image:
         "https://media.abhishekdhuparfilms.com/wedding-10/R1.jpg",
       mobileImage:
-        "https://media.abhishekdhuparfilms.com/wedding-10/R1.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-10/M-10.jpg",
       names: "Aisha & William",
       slug: "aisha-william",
     },
@@ -90,7 +90,7 @@ export default function PhotographyShowcase() {
       image:
         "https://media.abhishekdhuparfilms.com/wedding-5/M2.jpg",
       mobileImage:
-        "https://media.abhishekdhuparfilms.com/wedding-5/M2.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-5/M-5.jpg",
       names: "Gauri & Shwetank",
       slug: "gauri-shwetank",
     },
@@ -99,7 +99,7 @@ export default function PhotographyShowcase() {
       image:
         "https://media.abhishekdhuparfilms.com/wedding-9/13A.jpg",
       mobileImage:
-        "https://media.abhishekdhuparfilms.com/wedding-9/13A.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-9/M-9.jpg",
       names: "Shwetank Haldi",
       slug: "shwetank-haldi",
     },
@@ -108,7 +108,7 @@ export default function PhotographyShowcase() {
       image:
         "https://media.abhishekdhuparfilms.com/wedding-2/8B.jpg",
       mobileImage:
-        "https://media.abhishekdhuparfilms.com/wedding-2/8B.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-2/M-2.jpg",
       names: "Aditya Haldi",
       slug: "aditya-haldi",
     },
@@ -117,7 +117,7 @@ export default function PhotographyShowcase() {
       image:
         "https://media.abhishekdhuparfilms.com/wedding-11/11A.jpg",
       mobileImage:
-        "https://media.abhishekdhuparfilms.com/wedding-11/11A.jpg",
+        "https://media.abhishekdhuparfilms.com/wedding-11/M-11.jpg",
       names: "Suvigya & Keshav",
       slug: "suvigya-keshav-haldi",
     },
